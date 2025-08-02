@@ -1,36 +1,69 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Raja Lodge Ooty</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raja Lodge - Ooty</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    video#bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+    }
+  </style>
 </head>
-<body class="scroll-smooth bg-white text-gray-800 font-sans">
+<body class="text-white font-sans">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50 flex justify-between px-6 py-4">
-    <h1 class="text-xl font-bold text-green-700">Raja Lodge</h1>
-    <ul class="flex space-x-4 text-sm font-medium">
-      <li><a href="#home" class="hover:text-green-700">Home</a></li>
-      <li><a href="#about" class="hover:text-green-700">About</a></li>
-      <li><a href="#gallery" class="hover:text-green-700">Gallery</a></li>
-      <li><a href="#pricing" class="hover:text-green-700">Pricing</a></li>
-      <li><a href="#booking" class="hover:text-green-700">Booking</a></li>
-      <li><a href="#reviews" class="hover:text-green-700">Reviews</a></li>
-      <li><a href="#contact" class="hover:text-green-700">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="InShot_20250802_135353047 (1).mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex flex-col items-center justify-center bg-[url('https://your-hotel-image-url.jpg')] bg-cover bg-center text-white text-center px-6">
-    <h2 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Raja Lodge, Ooty</h2>
-    <p class="text-lg md:text-xl max-w-xl">Just 100m from bus stand & railway station. Perfect for your cozy stay in the Queen of Hills!</p>
-    <a href="#booking" class="mt-6 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow">Book Now</a>
+  <!-- Transparent Navbar -->
+  <header class="fixed w-full top-0 left-0 bg-black bg-opacity-40 backdrop-blur-md z-50">
+    <nav class="flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-yellow-400">Raja Lodge</h1>
+      <ul class="flex space-x-6 text-sm md:text-base">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+        <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
+        <li><a href="pricing.html" class="hover:text-yellow-400">Pricing</a></li>
+        <li><a href="booking.html" class="hover:text-yellow-400">Booking</a></li>
+        <li><a href="review.html" class="hover:text-yellow-400">Reviews</a></li>
+        <li><a href="guidelines.html" class="hover:text-yellow-400">Guidelines</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Content -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-4">Welcome to Raja Lodge, Ooty</h2>
+    <p class="text-lg md:text-xl max-w-xl">Your perfect stay just 5 minutes from the Ooty Bus Stand and Railway Station. Experience comfort, elegance, and convenience at its finest.</p>
   </section>
 
-  <!-- About, Gallery, Pricing, Booking, Reviews, Contact will follow here... -->
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919843830181" class="whatsapp-btn" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" />
+  </a>
 
 </body>
 </html>
